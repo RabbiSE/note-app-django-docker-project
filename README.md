@@ -14,16 +14,8 @@ docker build -t django-app .
 ```
 docker compose up
 ```
-or 
-```
-docker-compose -f docker-compose.yml up
-```
 
 ## Build the app image and run the containers in one go:
 ```
 docker compose up --build
-```
-or 
-```
-docker-compose -f docker-compose.yml up --build
 ```
