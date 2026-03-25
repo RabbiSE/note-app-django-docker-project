@@ -2,7 +2,7 @@
 
 ## Clone the repo:
 ```
-git clone https://github.com/RabbiSE/django-app.git
+git clone https://github.com/RabbiSE/note-app-django-docker-project.git
 ```
 
 ## Build the app image using Dockerfile:
