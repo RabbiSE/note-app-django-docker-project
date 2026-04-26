@@ -1,12 +1,13 @@
+@Library('note-app-libs') _
 pipeline {
     agent { label 'job' }
 
     stages {
         stage('Docker Cleanup') {
             steps {
-                echo 'Cleaning images and containers from Docker'
-                sh 'docker rm -f $(docker ps -aq) && docker rmi -f $(docker images -aq)'
-                echo 'Cleaning images and containers from Docker is Completed'
+                script {
+                    docker_cleanup()
+                }
             }
         }
         stage('Github Code Clone') {
