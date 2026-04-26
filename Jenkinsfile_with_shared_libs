@@ -19,9 +19,9 @@ pipeline {
         }
         stage('Docker Build and Deployment') {
             steps {
-                echo 'Running docker compose'
-                sh 'docker compose up -d'
-                echo 'Running Docker compose is Completed'
+                script {
+                    build_n_deploy()
+                }
             }
         }
         stage('Image to Dockerhub') {
