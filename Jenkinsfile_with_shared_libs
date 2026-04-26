@@ -12,9 +12,9 @@ pipeline {
         }
         stage('Github Code Clone') {
             steps {
-                echo 'Cloning code from Github'
-                git url: 'https://github.com/RabbiSE/note-app-django-docker-project.git', branch: 'main'
-                echo 'Cloning code from Github is Completed'
+                script {
+                    code_clone('https://github.com/RabbiSE/note-app-django-docker-project.git', 'main')
+                }
             }
         }
         stage('Docker Build and Deployment') {
